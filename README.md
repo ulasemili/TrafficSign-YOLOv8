@@ -70,9 +70,3 @@ python detect.py --source 0 --conf 0.70
 ```bash
 python detect.py --source tests/test1.mp4 --conf 0.50
 ```
-
-## 👥 Geliştirici Ekip
-* **Ulaş Emili** - Bilgisayar Mühendisliği
-* **[Ekip Arkadaşı 1]** - Bilgisayar Mühendisliği
-* **[Ekip Arkadaşı 2]** - Bilgisayar Mühendisliği
-* **[Ekip Arkadaşı 3]** - Bilgisayar Mühendisliği
