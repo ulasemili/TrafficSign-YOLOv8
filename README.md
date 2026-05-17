@@ -22,7 +22,7 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
 
 1. Repoyu bilgisayarınıza klonlayın ve klasöre girin:
 ```bash
-git clone https://github.com/ulasemili/TrafficSign-YOLOv8.git
+git clone [https://github.com/ulasemili/TrafficSign-YOLOv8.git](https://github.com/ulasemili/TrafficSign-YOLOv8.git)
 cd TrafficSign-YOLOv8
 ```
 
@@ -35,18 +35,44 @@ pip install -r requirements.txt
 
 ## 🚀 Kullanım Senaryoları
 
-Yazdığımız yapay zeka entegrasyonu, kaynak dosyalarını otomatik olarak işler ve sonuçları ayrı bir klasöre (`test_results`) kaydeder.
+Yazdığımız akıllı tespit algoritması (`detect.py`), verdiğiniz medya türünü (fotoğraf, video veya canlı yayın) otomatik olarak algılar, işler ve sonuçları `test_results/` klasörüne kaydeder. Test etmek istediğiniz medyaları proje dizinindeki `tests/` klasörünün içine atabilirsiniz.
 
-### Senaryo 1: Video Üzerinden Tespit (Önerilen)
-Dışarıda çektiğiniz test videolarını proje dizininde otomatik oluşan `test_videos` klasörünün içine atın ve terminalden şu komutu çalıştırın:
+### Senaryo 1: Video Üzerinden Tespit
 ```bash
-python detect.py --source test_videos/test1.mp4
+python detect.py --source tests/test1.mp4
 ```
-**Sonuç:** Model videoyu anlık olarak ekranda işler ve bittiğinde `test_results/` klasörüne `test1_processed.mp4` adıyla otomatik olarak kaydeder.
+**Sonuç:** Model videoyu anlık olarak ekranda işler ve bittiğinde `test_results/test1_processed.mp4` adıyla otomatik olarak kaydeder.
 
-### Senaryo 2: Canlı Web Kamerası ile Tespit
-Gerçek zamanlı olarak bilgisayarınızın web kamerasını (veya bağlı bir akıllı telefonu) kullanarak canlı tespit yapmak için kaynak olarak `0` parametresini verin:
+### Senaryo 2: Fotoğraf Üzerinden Tespit
+```bash
+python detect.py --source tests/test_foto.jpg
+```
+**Sonuç:** Fotoğraf tek seferde işlenir, tespitler çizilmiş haliyle ekranda gösterilir ve `test_results/test_foto_processed.jpg` adıyla kaydedilir.
+
+### Senaryo 3: Canlı Web Kamerası ile Tespit
+Gerçek zamanlı olarak bilgisayarınızın web kamerasını (veya bağlı bir akıllı telefonu) kullanmak için kaynak olarak `0` parametresini verin:
 ```bash
 python detect.py --source 0
 ```
-**Sonuç:** Kamera açılır, ekranda canlı tespit başlar. Kapatmak için `q` tuşuna basmanız yeterlidir. Çıktı, otomatik olarak `test_results/webcam_live_result.mp4` adıyla kaydedilir.
+**Sonuç:** Kamera açılır, ekranda canlı tespit başlar. Kapatmak için klavyeden `q` tuşuna basmanız yeterlidir. Çıktı, `test_results/webcam_live_result.mp4` adıyla kaydedilir.
+
+---
+
+### 🎯 Gelişmiş Ayar: Olasılık Filtresi (`--conf`)
+Modelin sadece belirli bir olasılığın (güven eşiğinin) üzerindeki tespitleri ekrana çizmesini isterseniz `--conf` parametresini kullanabilirsiniz. Varsayılan değer **%25 (0.25)** olarak ayarlıdır.
+
+**Örnek 1:** Kamerada sadece **%70** ve üzeri emin olduğu levhaları göstersin:
+```bash
+python detect.py --source 0 --conf 0.70
+```
+
+**Örnek 2:** Videoda sadece **%50** ve üzeri doğruluğa sahip levhaları işlesin:
+```bash
+python detect.py --source tests/test1.mp4 --conf 0.50
+```
+
+## 👥 Geliştirici Ekip
+* **Ulaş Emili** - Bilgisayar Mühendisliği
+* **[Ekip Arkadaşı 1]** - Bilgisayar Mühendisliği
+* **[Ekip Arkadaşı 2]** - Bilgisayar Mühendisliği
+* **[Ekip Arkadaşı 3]** - Bilgisayar Mühendisliği

@@ -2,16 +2,26 @@
 .DS_Store
 .AppleDouble
 .LSOverride
+Thumbs.db
+desktop.ini
 
-# Python Ön Bellek Dosyaları
+# IDE ve Editörler
+.vscode/
+.idea/
+
+# Python Ön Bellek ve Sanal Ortamlar
 __pycache__/
 *.pyc
 *.pyo
+venv/
+.venv/
 
-# Test Videoları ve Sonuçları (GitHub'ı şişirmemek için videoları gizliyoruz)
-test_videos/*
-test_results/*
-*.mp4
-*.mov
-*.avi
-*.mkv
+# YOLO Otomatik Çıktıları
+runs/
+
+# Çıktı klasörünü tamamen engelle
+test_results/
+
+# tests klasörünün içindeki medyaları engelle ama klasör yapısını tut (.gitkeep hariç)
+tests/*
+!tests/.gitkeep
