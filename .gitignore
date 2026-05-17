@@ -1,0 +1,17 @@
+# İşletim Sistemi Dosyaları
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python Ön Bellek Dosyaları
+__pycache__/
+*.pyc
+*.pyo
+
+# Test Videoları ve Sonuçları (GitHub'ı şişirmemek için videoları gizliyoruz)
+test_videos/*
+test_results/*
+*.mp4
+*.mov
+*.avi
+*.mkv
