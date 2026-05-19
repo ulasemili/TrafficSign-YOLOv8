@@ -4,10 +4,7 @@ Bu proje, otonom sürüş sistemleri için geliştirilmiş, gerçek zamanlı (re
 
 
 <div align="center">
-  <img src="assets/demo_foto.jpg" width="600" alt="Otonom Tespit Demosu">
-  
-  <br>
-  <i>Ayrıca test videosu izlemek için repo içindeki <b>assets/demo_video.mov</b> dosyasına göz atabilirsiniz.</i>
+  <img src="assets/demo_foto.jpg" width="250" alt="Otonom Tespit Demosu">
 </div>
 
 
