@@ -1,12 +1,15 @@
 # 🚦 Otonom Araçlar İçin Gerçek Zamanlı Trafik Levhası Tespiti
 
+Bu proje, otonom sürüş sistemleri için geliştirilmiş, gerçek zamanlı (real-time) trafik işareti tespit modelidir. YOLOv8 derin öğrenme mimarisi kullanılarak eğitilmiş olup, değişen ışık koşullarında ve hareket halindeyken yüksek tespit doğruluğu ve yüksek kare hızı (FPS) sunmaktadır.
+
+
 <div align="center">
-  <img src="assets/demo_foto.jpg" width="80%" alt="Otonom Tespit Demosu">
+  <img src="assets/demo_foto.jpg" width="600" alt="Otonom Tespit Demosu">
   
-  *(Test videosu izlemek için repo içindeki `assets/demo_video.mov` dosyasına göz atabilirsiniz.)*
+  <br>
+  <i>Ayrıca test videosu izlemek için repo içindeki <b>assets/demo_video.mov</b> dosyasına göz atabilirsiniz.</i>
 </div>
 
-Bu proje, otonom sürüş sistemleri için geliştirilmiş, gerçek zamanlı (real-time) trafik işareti tespit modelidir. YOLOv8 derin öğrenme mimarisi kullanılarak eğitilmiş olup, değişen ışık koşullarında ve hareket halindeyken yüksek tespit doğruluğu ve yüksek kare hızı (FPS) sunmaktadır.
 
 ## 📌 Proje Hakkında ve Mühendislik Yaklaşımı
 Trafik ortamındaki zorlu koşullar ve donanımsal kısıtlamalar göz önüne alınarak, hız ve doğruluğun optimum dengesini sunan **YOLOv8s (Small)** modeli tercih edilmiştir. Proje geliştirme sürecinde modelin "ezberlemesini" (overfitting) önlemek ve doğruluğu artırmak için veri seti üzerinde iteratif optimizasyonlar (v5) yapılmıştır.
