@@ -16,9 +16,11 @@ Trafik ortamındaki zorlu koşullar ve donanımsal kısıtlamalar göz önüne a
 
 ## 📊 Model Başarısı (v5 Sonuçları)
 Uygulanan veri seti optimizasyonları sonucunda (v5), model kapasitesinin zirvesine ulaşmış ve plato (plateau) evresine başarıyla girmiştir. Eğitim sonu elde edilen doğruluk metrikleri şöyledir:
-* **mAP50 (Ortalama Hassasiyet):** > %90.4
+* **mAP50 (Ortalama Hassasiyet):** %91.3
+* **mAP50-95 (Sınır Kutusu Yerleşim Kesinliği):** %75.0
 * **Precision (Hassasiyet):** %91.5
-* **Recall (Duyarlılık):** %85.1
+* **Recall (Duyarlılık):** %85.5
+* **F1-Score (Genel Denge):** %88.3
 
 *(Modelin hata kaybı (val_loss) grafikleri sıfır ezber (no overfitting) ile istikrarlı bir şekilde minimuma inmiştir. Epoch bazlı detaylı EKG/Analiz grafikleri için `metrics/results.png` ve `metrics/confusion_matrix.png` dosyalarını inceleyebilirsiniz.)*
 
