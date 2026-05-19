@@ -5,7 +5,7 @@ import os
 from ultralytics import YOLO
 
 # 1. Terminalden Gelen Komutları Yakalama
-parser = argparse.ArgumentParser(description="YOLOv8 Traffic Sign Detection")
+parser = argparse.ArgumentParser(description="YOLOv8 Traffic Sign Detection v5")
 parser.add_argument("--source", type=str, default="0", help="Medya yolu veya Webcam için '0'")
 parser.add_argument("--conf", type=float, default=0.25, help="Minimum tespit olasılık eşiği (Örn: 0.50)")
 args = parser.parse_args()
@@ -27,9 +27,9 @@ else:
     device = "cpu"
     print("[BİLGİ] Harici GPU bulunamadı. CPU kullanılacak.")
 
-# 4. Modeli Yükle
-print("[BİLGİ] YOLOv8 Modeli yükleniyor...")
-model = YOLO("best.pt")
+# 4. Modeli Yükle (GÜNCELLENDİ: v5 Modeli)
+print("[BİLGİ] YOLOv8 Modeli (v5) yükleniyor...")
+model = YOLO("best_v5.pt")
 
 # 5. Dosya Formatını Analiz Etme
 source = args.source
